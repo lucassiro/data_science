@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "deep-learning-path"
+version = "0.1.0"
+description = ""
+authors = ["Lucas Siqueira <siqueiraq@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.6"
+torch = "^2.4.1"
+torchvision = "^0.19.1"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.2.5"
+mypy = "^1.11.2"
+ruff = "^0.6.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+preview = true
+select = [
+  "I",
+  "F",
+  "E",
+  "W",
+  "N",
+  "PL",
+  "PT",
+  "ANN",
+  "Q",
+  "ARG",
+  "PD",
+  "NPY",
+  "FAST",
+  "RUF",
+  "PERF",
+]
+ignore = ["PLR0913", "PLR0917", "PD901"]
+
+[tool.ruff.format]
+preview = true
+quote-style = "double"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 120
