@@ -17,6 +17,8 @@ seaborn = "^0.13.2"
 torch = "^2.5.1"
 torchvision = "^0.20.1"
 scikit-learn = "^1.5.2"
+kagglehub = "^0.3.6"
+ipywidgets = "^8.1.5"
 
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.3.1"
@@ -30,7 +32,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.ruff.lint]
 preview = true
 select = [ "I", "F", "E", "W", "N", "PL", "PT", "ANN", "Q", "ARG", "PD", "NPY", "FAST", "RUF", "PERF"]
-ignore = ["PLR0913", "PLR0917", "PD901"]
+ignore = ["PLR0913", "PLR0917", "PD901", "N806"]
 
 [tool.ruff.format]
 preview = true
