@@ -7,3 +7,4 @@ experiments/
 .idea/
 __pycache__/
 .mypy_cache/
+data/
