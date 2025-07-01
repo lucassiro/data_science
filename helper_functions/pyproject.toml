@@ -1,0 +1,17 @@
+[project]
+name = "helper-functions"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Lucas Siqueira", email = "siqueiraq@gmail.com" }
+]
+requires-python = ">=3.13.5"
+dependencies = []
+
+[project.scripts]
+helper-functions = "helper_functions:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
