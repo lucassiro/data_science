@@ -1,42 +1,60 @@
-[tool.poetry]
+[project]
 name = "deep-learning-path"
 version = "0.1.0"
-description = ""
-authors = ["Lucas Siqueira <siqueiraq@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-matplotlib = "^3.9.2"
-opencv-python = "^4.10.0.84"
-pandas = "^2.2.3"
-pillow = "^11.0.0"
-polars = "^1.15.0"
-rich = "^13.9.4"
-seaborn = "^0.13.2"
-torch = "^2.5.1"
-torchvision = "^0.20.1"
-scikit-learn = "^1.5.2"
-kagglehub = "^0.3.6"
-ipywidgets = "^8.1.5"
-
-[tool.poetry.group.dev.dependencies]
-jupyterlab = "^4.3.1"
-mypy = "^1.13.0"
-ruff = "^0.8.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.13.5"
+dependencies = [
+    "helper-functions",
+    "jupyterlab>=4.4.4",
+    "matplotlib>=3.10.3",
+    "mypy>=1.16.1",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.3.0",
+    "pillow>=11.3.0",
+    "plotly>=6.2.0",
+    "polars>=1.31.0",
+    "rich>=14.0.0",
+    "ruff>=0.12.1",
+    "scikit-learn>=1.7.0",
+    "seaborn>=0.13.2",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "xgboost>=3.0.2",
+]
 
 [tool.ruff.lint]
 preview = true
-select = [ "I", "F", "E", "W", "N", "PL", "PT", "ANN", "Q", "ARG", "PD", "NPY", "FAST", "RUF", "PERF"]
+select = [
+    "I",
+    "F",
+    "E",
+    "W",
+    "N",
+    "PL",
+    "PT",
+    "ANN",
+    "Q",
+    "ARG",
+    "PD",
+    "NPY",
+    "FAST",
+    "RUF",
+    "PERF",
+]
 ignore = ["PLR0913", "PLR0917", "PD901", "N806"]
 
 [tool.ruff.format]
 preview = true
 quote-style = "double"
+
+[tool.uv.workspace]
+members = [
+    "helper_functions",
+]
+
+[tool.uv.sources]
+helper-functions = { workspace = true }
 
 [tool.mypy]
 ignore_missing_imports = true
