@@ -8,6 +8,7 @@ dependencies = [
     "helper-functions",
     "jupyterlab>=4.4.4",
     "matplotlib>=3.10.3",
+    "missingno>=0.5.2",
     "mypy>=1.16.1",
     "opencv-python>=4.11.0.86",
     "pandas>=2.3.0",
@@ -20,6 +21,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "torch>=2.6.0",
     "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
     "xgboost>=3.0.2",
 ]
 
@@ -49,9 +51,7 @@ preview = true
 quote-style = "double"
 
 [tool.uv.workspace]
-members = [
-    "helper_functions",
-]
+members = ["helper_functions"]
 
 [tool.uv.sources]
 helper-functions = { workspace = true }
