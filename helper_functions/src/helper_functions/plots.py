@@ -1,5 +1,6 @@
 import itertools
 
+import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import PercentFormatter
@@ -48,3 +49,27 @@ def make_confusion_matrix(
             color="white" if cm_norm[i, j] > threshold else "black",
             size=text_size,
         )
+
+
+def plot_images(
+    filepaths: list[str],
+    predictions: np.ndarray,
+    labels: list[str],
+    rows: int,
+    columns: int,
+    figsize: tuple[float, float] = (10.0, 10.0),
+) -> None:
+    fig = plt.figure(figsize=figsize)
+    for n, file in enumerate(filepaths):
+        img = cv2.imread(file)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+        fig.add_subplot(rows, columns, n + 1)
+
+        predicted_class = np.argmax(predictions[n])
+        prob = max(predictions[n])
+        label = labels[predicted_class]
+
+        plt.imshow(img)
+        plt.title(f"{label}: {prob:.4f}")
+        plt.axis("off")

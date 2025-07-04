@@ -1,6 +1,6 @@
 .venv/
 todo.md
-data/
+datasets/
 carparts-seg/
 experiments/
 *.pt
@@ -9,3 +9,4 @@ __pycache__/
 .mypy_cache/
 data/
 _*
+!__init__.py
