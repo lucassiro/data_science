@@ -1,6 +1,12 @@
 {
     "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "notebook.output.wordWrap": true,
+    "notebook.lineNumbers": "on",
     "notebook.formatOnSave.enabled": true,
+    "python.analysis.exclude": [],
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
     "ruff.enable": true,
-    "python.analysis.exclude": []
 }
